@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160317132103) do
+ActiveRecord::Schema.define(version: 20160317142648) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "countries", force: :cascade do |t|
+    t.string   "country_code"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "subdivisions", force: :cascade do |t|
+    t.string   "code"
+    t.integer  "country_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "subdivisions", ["country_id"], name: "index_subdivisions_on_country_id", using: :btree
 
   create_table "translations", force: :cascade do |t|
     t.string   "locale"
@@ -26,4 +41,5 @@ ActiveRecord::Schema.define(version: 20160317132103) do
     t.datetime "updated_at"
   end
 
+  add_foreign_key "subdivisions", "countries"
 end

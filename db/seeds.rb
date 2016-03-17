@@ -1,7 +1,88 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+I18n::Backend::ActiveRecord::Translation.create!([
+  {locale: "en", key: "country.code.AD", value: "Andorra", interpolations: [], is_proc: false},
+  {locale: "ru", key: "country.code.AD", value: "Андорра", interpolations: [], is_proc: false},
+  {locale: "en", key: "country.code.AE", value: "United Arab Emirates", interpolations: [], is_proc: false},
+  {locale: "ru", key: "country.code.AE", value: "Объединённые Арабские Эмираты", interpolations: [], is_proc: false},
+  {locale: "en", key: "country.code.AF", value: "Afghanistan", interpolations: [], is_proc: false},
+  {locale: "ru", key: "country.code.AF", value: "Афганистан", interpolations: [], is_proc: false},
+  {locale: "en", key: "country.code.AG", value: "Antigua and Barbuda", interpolations: [], is_proc: false},
+  {locale: "ru", key: "country.code.AG", value: "Антигуа и Барбуда", interpolations: [], is_proc: false},
+  {locale: "en", key: "country.code.AI", value: "Anguilla", interpolations: [], is_proc: false},
+  {locale: "ru", key: "country.code.AI", value: "Ангвилла", interpolations: [], is_proc: false},
+  {locale: "en", key: "country.code.AL", value: "Albania", interpolations: [], is_proc: false},
+  {locale: "ru", key: "country.code.AL", value: "Албания", interpolations: [], is_proc: false},
+  {locale: "en", key: "country.code.AM", value: "Armenia", interpolations: [], is_proc: false},
+  {locale: "ru", key: "country.code.AM", value: "Армения", interpolations: [], is_proc: false},
+  {locale: "en", key: "country.code.AN", value: "Netherlands Antilles", interpolations: [], is_proc: false},
+  {locale: "ru", key: "country.code.AN", value: nil, interpolations: [], is_proc: false},
+  {locale: "en", key: "country.code.AO", value: "Angola", interpolations: [], is_proc: false},
+  {locale: "ru", key: "country.code.AO", value: "Ангола", interpolations: [], is_proc: false},
+  {locale: "en", key: "country.code.AQ", value: "Antarctica", interpolations: [], is_proc: false},
+  {locale: "ru", key: "country.code.AQ", value: "Антарктика", interpolations: [], is_proc: false}
+])
+Country.create!([
+  {country_code: "AD"},
+  {country_code: "AE"},
+  {country_code: "AF"},
+  {country_code: "AG"},
+  {country_code: "AI"},
+  {country_code: "AL"},
+  {country_code: "AM"},
+  {country_code: "AN"},
+  {country_code: "AO"},
+  {country_code: "AQ"},
+  {country_code: "AR"},
+  {country_code: "AS"},
+  {country_code: "AT"},
+  {country_code: "AU"},
+  {country_code: "AW"},
+  {country_code: "AX"},
+  {country_code: "AZ"},
+  {country_code: "BA"},
+  {country_code: "BB"},
+  {country_code: "BD"}
+])
+Subdivision.create!([
+  {code: "02", country_id: 251},
+  {code: "03", country_id: 251},
+  {code: "04", country_id: 251},
+  {code: "05", country_id: 251},
+  {code: "06", country_id: 251},
+  {code: "07", country_id: 251},
+  {code: "08", country_id: 251},
+  {code: "AJ", country_id: 252},
+  {code: "AZ", country_id: 252},
+  {code: "DU", country_id: 252},
+  {code: "FU", country_id: 252},
+  {code: "RK", country_id: 252},
+  {code: "SH", country_id: 252},
+  {code: "UQ", country_id: 252},
+  {code: "BAL", country_id: 253},
+  {code: "BAM", country_id: 253},
+  {code: "BDG", country_id: 253},
+  {code: "BDS", country_id: 253},
+  {code: "BGL", country_id: 253},
+  {code: "DAY", country_id: 253}
+])
+Translation.create!([
+  {locale: "en", key: "country.code.AD", value: "Andorra", interpolations: nil, is_proc: false},
+  {locale: "ru", key: "country.code.AD", value: "Андорра", interpolations: nil, is_proc: false},
+  {locale: "en", key: "country.code.AE", value: "United Arab Emirates", interpolations: nil, is_proc: false},
+  {locale: "ru", key: "country.code.AE", value: "Объединённые Арабские Эмираты", interpolations: nil, is_proc: false},
+  {locale: "en", key: "country.code.AF", value: "Afghanistan", interpolations: nil, is_proc: false},
+  {locale: "ru", key: "country.code.AF", value: "Афганистан", interpolations: nil, is_proc: false},
+  {locale: "en", key: "country.code.AG", value: "Antigua and Barbuda", interpolations: nil, is_proc: false},
+  {locale: "ru", key: "country.code.AG", value: "Антигуа и Барбуда", interpolations: nil, is_proc: false},
+  {locale: "en", key: "country.code.AI", value: "Anguilla", interpolations: nil, is_proc: false},
+  {locale: "ru", key: "country.code.AI", value: "Ангвилла", interpolations: nil, is_proc: false},
+  {locale: "en", key: "country.code.AL", value: "Albania", interpolations: nil, is_proc: false},
+  {locale: "ru", key: "country.code.AL", value: "Албания", interpolations: nil, is_proc: false},
+  {locale: "en", key: "country.code.AM", value: "Armenia", interpolations: nil, is_proc: false},
+  {locale: "ru", key: "country.code.AM", value: "Армения", interpolations: nil, is_proc: false},
+  {locale: "en", key: "country.code.AN", value: "Netherlands Antilles", interpolations: nil, is_proc: false},
+  {locale: "ru", key: "country.code.AN", value: nil, interpolations: nil, is_proc: false},
+  {locale: "en", key: "country.code.AO", value: "Angola", interpolations: nil, is_proc: false},
+  {locale: "ru", key: "country.code.AO", value: "Ангола", interpolations: nil, is_proc: false},
+  {locale: "en", key: "country.code.AQ", value: "Antarctica", interpolations: nil, is_proc: false},
+  {locale: "ru", key: "country.code.AQ", value: "Антарктика", interpolations: nil, is_proc: false}
+])
